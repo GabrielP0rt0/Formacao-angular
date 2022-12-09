@@ -1,3 +1,4 @@
+import { TransferenciaService } from './services/transferencia.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,12 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '1-Exporando-o-Framework';
 
-  transferencia : any
+  constructor(private service: TransferenciaService){
+
+  }
 
   transferir($event){
-    this.transferencia = $event
+    this.service.adicionar($event)
   }
 
 }
