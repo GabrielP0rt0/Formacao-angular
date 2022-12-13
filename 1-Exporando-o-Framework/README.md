@@ -1,27 +1,66 @@
-# 1ExporandoOFramework
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
-## Development server
+👤 **Gabriel Luiz Porto**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* Github: [@GabrielP0rt0](https://github.com/GabrielP0rt0)
+* LinkdIn: [@gabriel luiz porto](https://www.linkedin.com/in/gabriel-luiz-porto-4688411b1/)
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Nesta Página:
 
-## Build
+* [Projeto](#projeto)
+* [Alternativas para aplicação](#aplicacao)
+* [Instalando dependências](#dependencias)
+* [Inicializando aplicação](init)
+* [Iniciando json server](#jsonServer)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<span id="projeto"></span>
+## Projeto
 
-## Running unit tests
+A página explorando o framework faz referência ao curso 1 da formação de angular feita pela alura, o projeto consiste em uma página utilizada para a criação de transferência e uma página para exibição do histórico das mesmas. O projeto foi feito em angular e utiliza api Rest através de [Jason Server](#jsonServer).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<span id="aplicacao"></span>
+## Alternativas para a aplicação
 
-## Running end-to-end tests
+Ao baixar o código todo, ou (se preferir) abrir diretamente em [Bytebank.App](https://formacao-angular-xi.vercel.app/extrato), deve-se inicializar o [Jason Server](#jsonServer) através da pasta dados encontrada nesta pasta. A pasta dados é a única que deve ser baixada obrigatóriamente para correto funciomaneto da aplicação. Caso prefira baixar o código todo, basta seguir os passos abaixos em [Instalando dependências](dependencias).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<span id="dependencias"></span>
+## Instalando dependências
 
-## Further help
+Ao baixar o projeto abra uma console de comandos na pasta raíz e utilize o seguinte comando:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```js
+npm install
+```
+
+ou 
+
+```js
+yarn install
+```
+
+<span id="init"></span>
+## Inicializando aplicação
+
+Para iniciar a aplicação abra novamente o console de comando na pasta raíz e utilize o comando 
+
+```js
+ng s -o
+```
+
+Uma página será inicializada no navegador com a aplicação em Angular, para que a aplicação funcione corretamente leia "[Inicializando json server](#jsonServer)"
+
+<span id="jsonServer"></span>
+##Inicializando json server
+
+Os dados da minha aplicação utilizam o json server, caso ainda não o tenha instalado abra um console de comando e utilize:
+```js
+npm install -g json-server
+```
+Após isso, abra um console de comando dentro da pasta "dados" e utilize:
+```js
+json-server --watch db.json
+```
+Não feche esse console de comando enquanto deseja que a aplicação rode. Com o servidor Json rodando e a aplicação frontend (seja pelo link fornecido ou pela aplicação inicializada em sua máquina) a aplicação do Bytebank está pronto para uso!!
+
