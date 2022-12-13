@@ -52,7 +52,7 @@ ng s -o
 Uma página será inicializada no navegador com a aplicação em Angular, para que a aplicação funcione corretamente leia "[Inicializando json server](#jsonServer)"
 
 <span id="jsonServer"></span>
-##Inicializando json server
+## Inicializando json server
 
 Os dados da minha aplicação utilizam o json server, caso ainda não o tenha instalado abra um console de comando e utilize:
 ```js
