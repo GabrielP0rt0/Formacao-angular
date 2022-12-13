@@ -1,4 +1,7 @@
+import { TransferenciaService } from '../services/transferencia.service';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Transferencia } from '../models/transferencia.models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nova-transferencia',
@@ -7,15 +10,26 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class NovaTransferenciaComponent {
 
-  @Output() aoTransferir = new EventEmitter<any>()
+  valor : number = null
+  destino : number = null
 
-  valor : number
-  destino : number
+  constructor(private service: TransferenciaService, private router: Router){
+  }
 
   transferir(){
-    const objeto = {valor: this.valor, destino: this.destino}
-    this.aoTransferir.emit(objeto)
-    this.limparCampos()
+
+    const valorEmitir: Transferencia = {valor: this.valor, destino: this.destino}
+
+    if (valorEmitir.valor != null || valorEmitir.destino != null){
+      this.service.adicionar(valorEmitir).subscribe(resultado => {
+        this.limparCampos()
+        this.router.navigateByUrl('extrato')
+      },
+      (error) => console.log(error))
+    } else {
+      alert("insira um valor válido")
+    }
+
   }
 
   limparCampos(){

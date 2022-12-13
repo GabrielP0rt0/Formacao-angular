@@ -1,3 +1,4 @@
+import { Transferencia } from './../models/transferencia.models';
 import { TransferenciaService } from './../services/transferencia.service';
 import { Component } from '@angular/core';
 
@@ -7,11 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./extrato.component.scss']
 })
 export class ExtratoComponent{
-  historico: any[]
+  public historico: any[]
 
   constructor(private service: TransferenciaService){}
 
   ngOnInit(){
-    this.historico = this.service.transferencias
+    this.service.todas().subscribe((transferencias: Transferencia[]) => {
+      this.historico = transferencias
+    })
   }
 }

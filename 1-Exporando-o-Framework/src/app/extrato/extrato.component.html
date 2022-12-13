@@ -1,23 +1,26 @@
-<h1 class="titulo">Histórico</h1>
+<section class="container">
 
-<table class="tabela">
-  <thead class="tabela__cabecalho">
-    <th class="tabela__cabecalho__conteudo">Data</th>
-    <th class="tabela__cabecalho__conteudo">Valor</th>
-    <th class="tabela__cabecalho__conteudo">Destino</th>
-  </thead>
-  <tbody *ngIf="historico?.length > 0; else listaVazia" class="tabela__linha">
-    <tr *ngFor="let transferencia of historico">
-      <td class="tabela__conteudo">{{transferencia.data | date: short}}</td>
-      <td class="tabela__conteudo">{{transferencia.valor | currency}}</td>
-      <td class="tabela__conteudo">{{transferencia.destino}}</td>
-    </tr>
-  </tbody>
-</table>
+  <h1 class="titulo">Histórico</h1>
 
-<ng-template #listaVazia>
-  <td class="mensagemHistorico">Nenhuma</td>
-  <td class="mensagemHistorico">Operação</td>
-  <td class="mensagemHistorico">Cadastrada</td>
-</ng-template>
+  <table class="tabela">
+    <thead class="tabela__cabecalho">
+      <th class="tabela__cabecalho__conteudo">Data</th>
+      <th class="tabela__cabecalho__conteudo">Valor</th>
+      <th class="tabela__cabecalho__conteudo">Destino</th>
+    </thead>
+    <tbody *ngIf="historico?.length > 0; else listaVazia" class="tabela__linha">
+      <tr *ngFor="let transferencia of historico">
+        <td class="tabela__conteudo">{{transferencia.data | date: short}}</td>
+        <td class="tabela__conteudo">{{transferencia.valor | currency}}</td>
+        <td class="tabela__conteudo">{{transferencia.destino}}</td>
+      </tr>
+    </tbody>
+  </table>
 
+  <ng-template #listaVazia>
+    <td class="mensagemHistorico">Nenhuma</td>
+    <td class="mensagemHistorico">Operação</td>
+    <td class="mensagemHistorico">Cadastrada</td>
+  </ng-template>
+
+</section>
