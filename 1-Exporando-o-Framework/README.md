@@ -18,12 +18,12 @@
 <span id="projeto"></span>
 ## Projeto
 
-A página explorando o framework faz referência ao curso 1 da formação de angular feita pela alura, o projeto consiste em uma página utilizada para a criação de transferência e uma página para exibição do histórico das mesmas. O projeto foi feito em angular e utiliza api Rest através de [Jason Server](#jsonServer).
+A página explorando o framework faz referência ao curso 1 da formação de angular feita pela alura, o projeto consiste em uma página utilizada para a criação de transferência e uma página para exibição do histórico das mesmas. O projeto foi feito em angular e utiliza api Rest através de [Json Server](#jsonServer).
 
 <span id="aplicacao"></span>
 ## Alternativas para a aplicação
 
-Ao baixar o código todo, ou (se preferir) abrir diretamente em [Bytebank.App](https://formacao-angular-xi.vercel.app/extrato), deve-se inicializar o [Jason Server](#jsonServer) através da pasta dados encontrada nesta pasta. A pasta dados é a única que deve ser baixada obrigatóriamente para correto funciomaneto da aplicação. Caso prefira baixar o código todo, basta seguir os passos abaixos em [Instalando dependências](dependencias).
+Ao baixar o código todo, ou (se preferir) abrir diretamente em [Bytebank.App](https://formacao-angular-xi.vercel.app/extrato), deve-se inicializar o [Json Server](#jsonServer) através da pasta dados encontrada nesta pasta. A pasta dados é a única que deve ser baixada obrigatóriamente para correto funciomaneto da aplicação. Caso prefira baixar o código todo, basta seguir os passos abaixos em [Instalando dependências](dependencias).
 
 <span id="dependencias"></span>
 ## Instalando dependências
